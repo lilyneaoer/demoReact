@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ex01</title>
+    <script src="../lib/react.js"></script>
+    <script src="../lib/react-dom.js"></script>
+    <script src="../lib/browser.min.js"></script>
+</head>
+<body>
+    <div id="example"></div>
+    <script type="text/babel">
+        // 组件类的第一个字母必须大写;组件类只能包含一个顶层标签
+        var HelloMessage=React.createClass({
+            render:function () {
+                return<h1 className="pageTitle">Hello,<span>MR.</span>{this.props.name},age:{this.props.age}</h1>
+            }
+        });
+
+        ReactDOM.render(
+            <HelloMessage name='David' age='12' />,
+            document.getElementById('example')
+        );
+    </script>
+</body>
+</html>
